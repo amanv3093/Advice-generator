@@ -19,7 +19,7 @@ function Advice(props) {
   if (advice === null) {
     return (
       <>
-        <div id="loader"></div>
+        <div id="loader">Loading...</div>
       </>
     );
   }

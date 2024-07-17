@@ -84,45 +84,9 @@ body {
 }
 
 #loader {
-  height: 60px;
-  width: 60px;
-  margin: 0 auto 2.3rem auto;
-  border: 7px solid var(--Neon-Green);
-  border-top-color: var(--Light-Cyan);
-  border-radius: 500px;
-  animation: completeLoaderSpinner 0.7s ease-in-out 0s infinite normal forwards,
-    loaderFragementSpinner 0.7s ease-in-out 0s infinite normal forwards;
-}
-
-@keyframes completeLoaderSpinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loaderFragementSpinner {
-  0% {
-    border-top-color: var(--Light-Cyan);
-  }
-  25% {
-    border-top-color: var(--Neon-Green);
-    border-left-color: var(--Light-Cyan);
-  }
-  50% {
-    border-left-color: var(--Neon-Green);
-    border-bottom-color: var(--Light-Cyan);
-  }
-  75% {
-    border-bottom-color: var(--Neon-Green);
-    border-right-color: var(--Light-Cyan);
-  }
-  100% {
-    border-right-color: var(--Neon-Green);
-    border-top-color: var(--Light-Cyan);
-  }
+  color: white;
+  padding-bottom: 1rem;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 400px) {
