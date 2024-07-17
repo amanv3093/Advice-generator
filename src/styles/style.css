@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Manrope, sans-serif;
+}
+
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Dark-Blue);
+}
+
+#adviceGenerator {
+  width: 95vw;
+  max-width: 500px;
+  padding: 2.5rem;
+  padding-bottom: 0;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+#adviceID {
+  color: var(--Neon-Green);
+  font-size: 7px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+#adviceID > h1,
+#advice {
+  font-weight: 800;
+}
+
+#advice {
+  color: var(--Light-Cyan);
+  font-size: 28px;
+  margin-bottom: 2.3rem;
+}
+
+#patternDivider {
+  height: 20px;
+  background-image: url("../images/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#generateAdviceBtn {
+  position: relative;
+  height: 55px;
+  width: 55px;
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto 0 auto;
+  top: 1.8rem;
+  cursor: pointer;
+  background-color: var(--Neon-Green);
+}
+#generateAdviceBtn:hover {
+  box-shadow: 0px 0px 22px 1px hsl(150, 100%, 66%);
+}
+
+#generateAdviceBtn:active {
+  box-shadow: 0 0 30px 4px var(--Neon-Green);
+}
+
+#loader {
+  height: 60px;
+  width: 60px;
+  margin: 0 auto 2.3rem auto;
+  border: 7px solid var(--Neon-Green);
+  border-top-color: var(--Light-Cyan);
+  border-radius: 500px;
+  animation: completeLoaderSpinner 0.7s ease-in-out 0s infinite normal forwards,
+    loaderFragementSpinner 0.7s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes completeLoaderSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderFragementSpinner {
+  0% {
+    border-top-color: var(--Light-Cyan);
+  }
+  25% {
+    border-top-color: var(--Neon-Green);
+    border-left-color: var(--Light-Cyan);
+  }
+  50% {
+    border-left-color: var(--Neon-Green);
+    border-bottom-color: var(--Light-Cyan);
+  }
+  75% {
+    border-bottom-color: var(--Neon-Green);
+    border-right-color: var(--Light-Cyan);
+  }
+  100% {
+    border-right-color: var(--Neon-Green);
+    border-top-color: var(--Light-Cyan);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #adviceGenerator {
+    padding: 2.5rem 1.3rem 0 1.3rem;
+  }
+  #patternDivider {
+    background-image: url("../images/pattern-divider-mobile.svg");
+  }
+}
